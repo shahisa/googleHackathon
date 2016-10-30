@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEM-mm-Wfe">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awC-PX-rGD">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eng-Wk-5eR"/>
+                                </constraints>
+                                <state key="normal" title="Translate">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="translate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jr4-IC-u5A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpa-st-xBD">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pY7-kW-0Vq"/>
+                                </constraints>
+                                <state key="normal" title="Detect Language">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="detect:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ixx-6O-88C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioU-WH-qz6">
+                                <frame key="frameInset" minX="47" minY="292" width="300" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Supported Languages">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="supportedLanguages:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8hs-7e-Bkh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="awC-PX-rGD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="129" id="2AC-Ze-HKP"/>
+                            <constraint firstAttribute="trailing" secondItem="gEM-mm-Wfe" secondAttribute="trailing" id="69X-wu-3aE"/>
+                            <constraint firstItem="ioU-WH-qz6" firstAttribute="top" secondItem="zpa-st-xBD" secondAttribute="bottom" constant="37" id="9lh-aH-WL1"/>
+                            <constraint firstItem="awC-PX-rGD" firstAttribute="leading" secondItem="ioU-WH-qz6" secondAttribute="leading" constant="-1" id="EHz-45-QCm"/>
+                            <constraint firstItem="gEM-mm-Wfe" firstAttribute="centerX" secondItem="ioU-WH-qz6" secondAttribute="centerX" id="Hr1-fV-V8N"/>
+                            <constraint firstItem="zpa-st-xBD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="IlM-7K-UYc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="awC-PX-rGD" secondAttribute="trailing" constant="13" id="STE-7Y-xAh"/>
+                            <constraint firstItem="zpa-st-xBD" firstAttribute="top" secondItem="awC-PX-rGD" secondAttribute="bottom" constant="26" id="Ybp-87-5bP"/>
+                            <constraint firstItem="gEM-mm-Wfe" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="65" id="cQV-TP-Kcp"/>
+                            <constraint firstItem="awC-PX-rGD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="iw5-qM-uDC"/>
+                            <constraint firstItem="awC-PX-rGD" firstAttribute="trailing" secondItem="ioU-WH-qz6" secondAttribute="trailing" constant="-1" id="pfX-hH-TWh"/>
+                            <constraint firstItem="ioU-WH-qz6" firstAttribute="top" secondItem="gEM-mm-Wfe" secondAttribute="bottom" constant="8" symbolic="YES" id="qGf-8J-sDD"/>
+                            <constraint firstItem="zpa-st-xBD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="21" id="s82-uK-zy4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="gEM-mm-Wfe" id="NBY-I6-Tvp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="-47"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
